@@ -1,17 +1,12 @@
 package com.spring.api.controller;
 
-import com.spring.api.model.Product;
-import com.spring.api.repository.ProductRepository;
-import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.http.HttpStatus;
-import org.springframework.http.ResponseEntity;
 import org.springframework.web.bind.annotation.*;
 
 @RestController
 @RequestMapping(value = "/api/product", produces = "application/json")
 public class ProductController {
 
-    @Autowired
+    /*@Autowired
     private ProductRepository productRepository;
 
     @GetMapping("/{id}")
@@ -29,5 +24,9 @@ public class ProductController {
     public ResponseEntity<Product> createProduct(@RequestBody Product product) {
         Product createdProduct = productRepository.save(product);
         return ResponseEntity.status(HttpStatus.CREATED).body(createdProduct);
+    }*/
+    @GetMapping("/test")
+    public String Test() {
+        return "testtesttest!!!";
     }
 }
